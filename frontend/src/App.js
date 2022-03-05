@@ -325,14 +325,14 @@ function App() {
         <br/>
 
         <div className="Start Device">
-            <Button className = "btn"  onClick={handleStart} disabled={!status.gen}>
+            <Button className = "btn"  onClick={handleStart} disabled={!status.gen||status.connected}>
                 Start the device
             </Button>
         </div>
         <br/>
 
         <div className="Register Device">
-            <Button className = "btn"  onClick={handleRegister} disabled={!status.connected}>
+            <Button className = "btn"  onClick={handleRegister} disabled={!status.connected||status.registered}>
                 Register
             </Button>
         </div>
@@ -343,6 +343,7 @@ function App() {
                 Authenticate
             </Button>
         </div>
+
     </div>
   );
 }
